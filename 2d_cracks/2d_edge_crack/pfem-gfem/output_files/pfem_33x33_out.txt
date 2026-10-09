@@ -1,0 +1,348 @@
+  TWODIMENSIONAL
+
+Timer: PhDataFile::read():
+  CPU time  = 0.006696 s
+  Wall time = 0.00738579 s
+
+TclISET::cmdParSet: WARNING: Setting exactSolAsPtBC = true 
+since exactSolAsBC was set to true. You can use:
+ "parSet exactSolAsPtBC false " 
+to overwrite this!!
+
+TclCrackMg2D::cmdCrackMgr2D: crackMgrID = 1
+
+cmdCrackMgr2D: action = create
+crackMgr2D: 
+tail: 
+[0, 2.41421, 0]
+tip: 
+[8, 8, 0]
+
+TclCrackMg2D::cmdCrackMgr2D: crackMgrID = 1
+
+cmdCrackMgr2D: action = setOptions
+
+*** Analysis::sortSpFeatManagers ***
+
+TclCrackMg2D::cmdCrackMgr2D: crackMgrID = 1
+
+cmdCrackMgr2D: action = branchFnGeometricEnrich
+branchFnGeometricEnrich: 
+radius: 2
+
+TclCrackMg2D::cmdCrackMgr2D: crackMgrID = 1
+
+cmdCrackMgr2D: action = setOptions
+
+TclCrackMg2D::cmdCrackMgr2D: crackMgrID = 1
+
+cmdCrackMgr2D: action = setOptions
+
+TclCrackMg2D::cmdCrackMgr2D: crackMgrID = 1
+
+cmdCrackMgr2D: action = process
+
+***SnapNodesToCrack::snapNodesProbMeshToCrackSurfaceAndFront***
+CrackFrontGeoEng3D::CrackFrontGeoEng3D
+
+
+snapToCrackSurfaceAndFrontUsingGNodSnapInfo: Number of Boundary GeoNods that could NOT be snapped to surface = 0
+
+snapToCrackSurfaceAndFrontUsingGNodSnapInfo: Number of GeoNods snapped to crack FRONT (snapping dist may be zero for some nodes) = 0
+
+SnapNodesToCrack::snapNodesProbMeshToCrackSurfaceAndFront: Number of nodes snapped (snapping dist may be zero for some nodes) = 4
+
+SnapNodesToCrack::snapNodesProbMeshToCrackSurfaceAndFront: Number of nodes of pfem-gfem elements whose coords where adjusted(change in coords may be zero for some nodes) = 106
+
+Timer: CrackManager2D::snapNodesProbMeshToCrackSurfaceAndFront:
+  CPU time  = 0.000407 s
+  Wall time = 0.000408625 s
+
+*** CrackManager2D::calcIntersectionsWithSurfaceUseSignedDist ***
+
+***CrackManager2D::calcElemEdgeIntersecSurfaceUseSignedDist***
+
+CrackManager2D::createCrackCutElInfoForElemsAtCrack: Cleanup all_edge_data
+
+CrackManager2D::calcIntersectionsWithSurfaceUseSignedDist: Num of elems with edge intersections = 27
+
+CrackManager2D::calcIntersectionsWithSurfaceUseSignedDist: Num of missing CrackCutElEnfo2 created = 6
+
+CrackManager2D::calcIntersectionsWithSurfaceUseSignedDist: Num of elements with or touching a crack tip = 2
+::isCrackTipIntersectionAtGeoNod (0/1): 0
+::isCrackTipIntersectionAtGeoNod (0/1): 0
+
+Timer: CrackManager2D::calcIntersectionsWithSurfaceUseSignedDist:
+  CPU time  = 0.001712 s
+  Wall time = 0.001712541999999928 s
+GeoMesh::geoNodsUsedByElemts: Number of nodes added to list = 71
+
+CrackManager2D::processCrack: Num nodes used by elements in list cutElemAndNeighList = 71
+
+Timer: CrackManager2D::processCrack: cutElements:
+  CPU time  = 0.000232 s
+  Wall time = 0.0002329169999999436 s
+
+**CrackManager2D::setSignedDistancesAllGNodInfo**
+
+
+CrackManager2D::processCrack: number of objects whose signed distance was setup 47
+
+CrackManager2D::elemOrientation: WARNING: Prob GeoEl with ID = 1092 has nodes Above AND Below Surface!
+
+CrackManager2D::setOrientNeighElems: GeoEl Problem with ID = 1092 may have NO valid orientation!
+
+CrackManager2D::elemOrientationWEnrich: WARNING: Prob GeoEl with ID = 1092 has NO node with requested enrich_type and orientation!
+
+CrackManager2D::setOrientNeighElems: WARNING: elemOrientationWEnrich also Failed! 
+Setting orientation to GNodCrackedElemsInfo::defaultNodalOrient
+
+SpFeatureManager::assignFaceBCsOnIntegDescd
+
+CrackManager2D::compNodsWithBranchFnFlag
+
+CrackManager2D::compNodsWithBranchFnFlag
+ Number of CompNods with Branch Fn Flag (Pure topological) = 4
+
+CrackManager2D::compNodsForGeomBranchEnrichInCylinder
+
+CrackManager2D::compNodsForGeomBranchEnrichInCylinder
+ Number of CompNods with Branch Fn Flag (Pure Topological) = 34
+
+CrackManager2D::compNodsForGeomBranchEnrichInCylinder
+ Number of CompNods with Branch Fn Flag (Pure Geometrical) = 18
+
+CrackManager2D::compNodsForGeomBranchEnrichInCylinder
+ Number of CompNods with Branch Fn Flag = 52
+CrackManager2D::createBranchFunctions nStateVariables = 2
+
+CrackManager2D::createBranchFunctions
+ Number of CompNods enriched with Branch Fn (Including those with BranchStep Pair) = 52
+
+CrackManager2D::createBranchFunctions
+ Number of CompNods enriched with BranchStepPair Fn = 4
+
+CrackManager2D::processCrack: number of Branch Functions Created = 52
+Remember to use "enrichApprox" or "enrichCompNod" commands in order to activate them!
+CrackManager2D::createCrackStepFunctions nStateVariables = 2
+
+CrackManager2D::createCrackStepFunctions
+ Number of CompNods enriched with Step Fn = 77
+
+CrackManager2D::processCrack: number of Step Functions Created = 77
+Remember to use "enrichApprox" or "enrichCompNod" commands in order to activate them!
+
+**CrackManager2D::setSignedDistancesAllNodesOfEnrichedCompEls**
+
+
+CrackManager2D::cleanUpGNodInfoUsedByPfemGfem: num objs deleted = 80
+
+Timer: CrackManager2D::processCrack:
+  CPU time  = 0.003852 s
+  Wall time = 0.003861667000000013 s
+
+LinAnalysis::assemble: Number of CompEls: 2178
+
+LinAnalysis::setLinearSystem:
+
+MUMPS message level = 0
+
+Num Equations = 9348 Num Non Zeros = 122182
+
+
+Timer: LinAnalysis::setLinearSystem: buildSparseStruc() OR buildBlockDiagStruc().:
+  CPU time  = 0.009995 s
+  Wall time = 0.007287040999999883 s
+
+** CompMesh::parallelBlockAssemble **
+Analysis::configureThreadingAndBLAS(): 
+	ISET_NUM_THREADS = 10
+	Number of threads for OpenMP = 10
+	Number of threads for BLAS = 1
+number of elems to be assembled = 2178
+number of threads being used = 10
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+*****************************
+FIXME: CompEl1D::getIntegrationPoints: NOT implementedfor p_geo_mng_desc != 0. This is needed if boundary conditions are
+prescribed on BC elements with node on crack tip*******
+FIXME: CompEl1D::getIntegrationPoints: NOT implementedfor p_geo_mng_desc != 0. This is needed if boundary conditions are
+prescribed on BC elements with node on crack tip***************
+
+** CompMesh::blockAssemblePtBC: Processing Point BCs **
+
+Timer: LinAnalysis::assemble: CompMesh::blockAssemble:
+  CPU time  = 0.694977 s
+  Wall time = 0.07299445899999979 s
+
+Time spent for (parallel) Assemble command: 0.081 s 
+
+
+LinAnalysis::factAndSolve (factorization + forward + back-subst, etc)
+
+**MumpsSolver<T>::factorize() called
+MUMPS message level = 0
+Analysis::configureThreadingAndBLAS(): 
+	ISET_NUM_THREADS = 10
+	Number of threads for OpenMP = 10
+	Number of threads for BLAS = 10
+
+**SparseSymSolver<T>::scaleMatrix()
+MumpsSolver<T>::setParameters: 
+ Using MUMPS Sequential Solver
+
+MumpsSolver<T>::setParameters():
+Using 10 thread(s)
+MUMPS message level = 0
+
+Timer: MumpsSolver<T>::symbolicFact:
+  CPU time  = 0.027568 s
+  Wall time = 0.02664491599999996 s
+
+MumpsSolver<T>::symbolicFact():
+Number of operations for factorization (GFLOPS) = 0.062369186
+Number of Non Zeros in Factors = 0
+Number of Non Zeros in Matrix = 122182
+
+Timer: MumpsSolver<T>::factorize:
+  CPU time  = 0.082287 s
+  Wall time = 0.01320208300000014 s
+
+MumpsSolver<T>::factorize(): 
+Number of negative pivots = 0
+Number of positive eigen values = 9348
+Dimension of matrix = 9348
+
+Timer: LinAnalysis::factAndSolve: lhs.factorize:
+  CPU time  = 0.118347 s
+  Wall time = 0.0417559999999999 s
+
+LinAnalysis::factAndSolve: Number of operations in factorization (flops) = 62369186
+
+LinAnalysis::factAndSolve: Speed of lhs.factorize (GFlops) = 0.5270026785638842
+Analysis::configureThreadingAndBLAS(): 
+	ISET_NUM_THREADS = 10
+	Number of threads for OpenMP = 10
+	Number of threads for BLAS = 10
+
+SymSolver<T>::solve: Stabilization being used:
+
+Iteration: 0 rel_err = 
+[1.143695605914046e-23]
+rel_err_norm = 1.143695605914046e-23 tolerance mrhs = 1e-12
+
+Timer: SymSolver<T>::solve: TOTAL:
+  CPU time  = 0.017569 s
+  Wall time = 0.003866416999999789 s
+
+Timer: SymSolver<T>::solve: All calls to backForwardSubst:
+  CPU time  = 0.010238 s
+  Wall time = 0.00249766699999987 s
+SymSolver<T>::solve:
+  Number of calls to backForwardSubst = 3
+  Average CPU time on backForwardSubst = 0.003412666666666667
+
+Timer: LinAnalysis::factAndSolve: lhs.solve:
+  CPU time  = 0.017593 s
+  Wall time = 0.003889124999999938 s
+MUMPS message level = 0
+
+WARNING: LHS will be destroyed. This prevents, 
+for example, the solution for other RHS using the factorized LHS.
+
+Timer: LinAnalysis::factAndSolve: TOTAL:
+  CPU time  = 0.137553 s
+  Wall time = 0.04627124999999999 s
+
+Time spent for solve command: 0.046 s 
+
+
+** CompMesh::parallelStrainEnergy **
+Analysis::configureThreadingAndBLAS(): 
+	ISET_NUM_THREADS = 10
+	Number of threads for OpenMP = 10
+	Number of threads for BLAS = 1
+
+energy:
+[3.792933697716756]
+energy_exact_sol: 
+[3.793036132949721]
+
+Timer: Analysis::strainEnergy:
+  CPU time  = 3.318299 s
+  Wall time = 0.332214792 s
+
+Analysis::strainEnergy: Energy Norms for solution: 0
+
+W(u_p) = 0.5*B(u_p,u_p) = U(u_p) = 3.7929336977167565e+00
+U(u_p) = 3.7929336977167565e+00
+||u_p||_E = sqrt(|B(u_p,u_p)|) = 2.7542453404578020e+00
+Squared L2 norm of solution = 1.2242763042637564e+03
+
+L2 norm of solution = 3.4989659962105328e+01
+
+W(u) = 0.5*B(u,u) = U(u) = 3.7930361329497213e+00
+
+U(u) = 3.7930361329497213e+00
+
+||u||_E = sqrt(|B(u,u)|) = 2.7542825319671622e+00
+
+U(u) - U(u_p) = 1.0243523296482593e-04
+(U(u) - U(u_p))/U(u) = 2.7006131598637151e-05
+
+||u - u_p||_E = 1.4313296822523169e-02
+||u - u_p||_E / ||u||_E = 5.1967424025669345e-03
+sqrt(B(u - u_p, u - u_p)) = 1.4249863273624912e-02
+Squared L2 norm of exact  solution = 1.5764526138836941e+03
+
+L2 norm of exact solution = 3.9704566662837337e+01
+
+L2 norm of error in solution = 1.8731337899581213e+01
+Relative error in L2 norm = 4.7176784621889256e-01
+GraphMeshVTK::drawSolution
+GraphMeshVTK::drawMesh: drawGraphMesh = 1
+
+Timer: GraphMesh::solution:
+  CPU time  = 0.013381 s
+  Wall time = 0.01338850000000003 s
+GraphMeshVTK::drawInfo: drawGFEMMesh = 1
+GraphMeshVTK::drawMesh: drawGraphMesh = 0
+
+L infinity norm of solution:
+[3.694362625603119, 4.180165387204879, 0, 0, 0, 0]
+
+L inf. norm of deriv. of solution:
+[
+[11.48536284635978, 31.12767744872447, 0], 
+[33.65256632509758, 12.89788354675264, 0], 
+[0, 0, 0], 
+[0, 0, 0], 
+[0, 0, 0], 
+[0, 0, 0]]
+
+WARNING: 
+L infinity norm of error:
+[1.141941349199162, 0.7472552235010241, 0, 0, 0, 0]
+
+L inf. norm of error in deriv.:
+[
+[0.0223355399195917, 0.0391643123646972, 0], 
+[0.05556870685927962, 0.01991770389390091, 0], 
+[0, 0, 0], 
+[0, 0, 0], 
+[0, 0, 0], 
+[0, 0, 0]]
+Cleanup gnod_cracked_elems
+Cleanup all_edge_data
+Cleanup cracked_elems_info
+CompMesh::~CompMesh(): Cleaning container with state variables
+Finished CompMesh::~CompMesh()
+Finished GeoMesh::~GeoMesh()
+
+
+***** Analysis::~Analysis:: Simulation finished with no errors *****
+
+Finished GeoMesh::~GeoMesh()
+CompMesh::~CompMesh(): Cleaning container with state variables
+Finished CompMesh::~CompMesh()
