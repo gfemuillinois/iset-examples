@@ -4,7 +4,7 @@
 ![](inclined_2d_edge_crack.png)
 
 **Inclined Edge Crack, Section 6.4 of \[Sanchez-Rivadeneira & Duarte,
-2019\]**
+2019\], available on Canvas: 2019\_Quadratic\_SGFEM\_2D\_cmame\_published.pdf**
 
 1\) Go to folder
 
@@ -77,7 +77,9 @@ TrueRelErrorElemEnergyNorm  
 10\) Visualize field Solution, Y-component, again: Keep this ON as we
 visualize enrichments
 
-11\) Use Paraview (http://www.paraview.org) to open *gfem\_33x33\_GFEM.vtu*
+11\) Visualize the boundary conditions: Drop *gfem\_33x33\_BCs.vtu* into ParaView
+
+12\) Use ParaView to open *gfem\_33x33\_GFEM.vtu*
 (you can just drop it on ParaView)
 
 *pfem\_33x33\_GFEM.vtu*
@@ -94,11 +96,13 @@ b\) StepFnEnrich : Use blue spheres with Radius = 0.5, Scale factor \~=
 c\) BranchStepPairEnrich : Use yellow spheres with Radius = 0.5, Scale
 factor \~= 0.2
 
+d\) Turn off all GFEM enrichment glyphs, and show "ApproxOrder": Use sphere with Scale Array: “ No scale array”, Scale factor = 0.1, Coloring: ApproxOrder 
+
 **Check where each enrichment is used: Element vertices and edges.**
 
 **Optional: Save ParaView State (.pvsm)**
 
-11a) If you got lost in the previous Task:
+13\) If you got lost in the previous Task:
 
 **Close ParaView and open it again.**
 
@@ -110,7 +114,7 @@ Load ParaView State (you can just drop it on ParaView):
 
 Visualize enrichments, etc.
 
-12\) Open the file pfem\_33x33\_out.txt using a text editor
+14\) Open the file pfem\_33x33\_out.txt using a text editor
 
 a)  Check the number of branch and step functions created:
 
@@ -160,11 +164,11 @@ energy\_exact\_sol:
 
 \|\|u - u_p\|\|\_E / \|\|u\|\|\_E = 5.1967424033667322e-03
 
-13\) **Open the Tcl File**
+15\) **Open the Tcl File**
 
 Study the Tcl commands.
 
-Details are in iset\_reference\_manual.pdf
+Details are in iset\_reference\_manual.pdf, which is available on Canvas.
 
 **OPTIONAL:**
 
@@ -184,7 +188,48 @@ enrichment)**
 
 \# crackMgr2D crackMgrID 1 branchFnGeometricEnrich inCylinder radius 2
 
-**[Change Problem: Move crack tail to same as in Section 4 of
-paper]{.mark}: Edge crack \[(0.0), (0,8)\]**
+**Change the crack orientation: Move the crack tail to the same as in Section 4 of
+\[Sanchez-Rivadeneira & Duarte, 2019\]: Edge crack \defined by [(0.8), (8,8)\]**
 
-Repeat the steps followed for the inclined crack.
+Repeat the tasks for this crack configuration.
+
+**Conditioning Control Strategies**
+
+1\) Solve the problem with the pFEM-GFEM
+
+parSet ShiftedSpBasisEnrichments off
+
+and check the value of the strain energy
+
+energy:  
+\[3.792933697716836\]  
+energy\_exact\_sol:  
+\[3.793036132949722\] 
+
+2\) Solve the problem using the Discontinuous-Shifted pFEM-GFEM
+
+parSet ShiftedSpBasisEnrichments  on
+
+and check the value of the strain energy
+
+energy:   
+\[3.792933697716504\]   
+energy\_exact\_sol:    
+\[3.793036132949721\]
+
+3\) Solve the problem using the Discontinuous-Interpolant Stable pFEM-GFEM 
+
+parSet SGFEMBranchFnEnrichmentsDiscInterp  on  
+parSet ShiftedNotBranchFnEnrichments  on
+
+Explain the above commands based on class notes 11a.
+
+check the value of the strain energy
+
+energy:   
+\[3.792933697716674\]   
+energy\_exact\_sol:    
+\[3.793036132949721\]   
+ 
+ What conclusions can you draw from the results above?
+ 
