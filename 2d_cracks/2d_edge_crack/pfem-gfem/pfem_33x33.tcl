@@ -69,7 +69,7 @@ crackMgr2D crackMgrID 1 create straightCrackEndPoints tail 0.0 2.414213562\
 # Horizontal edge crack problem, Section 4 of [Sanchez-Rivadeneira & Duarte, 2019]
 # Must also set in section "BEGIN NODES NUMBERED" of square_2d_domain_tria_33x33.grf
 # 100000001	9	8
-#crackMgr2D crackMgrID 1 create straightCrackEndPoints tail 0.0 0.0\
+#crackMgr2D crackMgrID 1 create straightCrackEndPoints tail 0.0 8.0\
 #                                                      tip  8.0 8.0
 
 # crack manager options
