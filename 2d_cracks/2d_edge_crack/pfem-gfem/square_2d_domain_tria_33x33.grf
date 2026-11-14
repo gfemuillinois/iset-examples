@@ -1161,12 +1161,15 @@ BEGIN NODES NUMBERED
 1155	15.5152	16	
 1156	16	16	
 
-# Artificial Nodes to creat an EdgeElas object to
+# Artificial Nodes to create an EdgeElas object to
 # provide exact boundary conditions from asymptotic
 # expansion
 
 # Crack tip
 100000000	8	8
+
+# Point on the x-axis of the crack coordinate system (parameter  NodeXAxis of EdgeElas2D object)
+#
 # Used for horizontal crack, Section 4.1 of paper
 #100000001	9	8
 
